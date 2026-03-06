@@ -1,0 +1,4 @@
+node_modules/
+atv1/node_modules/
+.env
+atv1/.env

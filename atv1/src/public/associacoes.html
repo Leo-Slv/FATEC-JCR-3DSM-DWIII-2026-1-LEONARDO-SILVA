@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Associações Pessoa ↔ Carro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <p class="back"><a href="index.html">← Voltar</a></p>
+    <h1>Listar associações (pessoa ↔ carro)</h1>
+    <div class="form-card">
+      <form id="formAssoc">
+        <label>Pessoa
+          <select name="pessoaId" required>
+            <option value="">Selecione uma pessoa</option>
+          </select>
+        </label>
+        <label>Carro
+          <select name="carroId" required>
+            <option value="">Selecione um carro</option>
+          </select>
+        </label>
+        <button type="submit" class="btn btn-primary">Associar</button>
+      </form>
+    </div>
+    <p id="msg" class="msg" hidden aria-live="polite"></p>
+    <h2>Associações</h2>
+    <div class="tabela-wrapper">
+      <table>
+        <thead>
+          <tr><th>ID</th><th>Pessoa</th><th>Email</th><th>Carro</th><th>Marca</th><th>Ano</th><th>Ações</th></tr>
+        </thead>
+        <tbody id="listaAssoc"></tbody>
+      </table>
+    </div>
+  </div>
+  <script src="associacoes.js"></script>
+</body>
+</html>

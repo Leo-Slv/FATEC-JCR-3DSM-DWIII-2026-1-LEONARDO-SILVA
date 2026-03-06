@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pessoas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <p class="back"><a href="index.html">← Voltar</a></p>
+    <h1>Cadastrar pessoas</h1>
+    <div class="form-card">
+      <form id="formPessoa">
+        <label>Nome <input type="text" name="nome" required placeholder="Nome completo"></label>
+        <label>Email <input type="email" name="email" required placeholder="email@exemplo.com"></label>
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+      </form>
+    </div>
+    <p id="msg" class="msg" hidden aria-live="polite"></p>
+    <h2>Lista de pessoas</h2>
+    <div class="tabela-wrapper">
+      <table>
+        <thead>
+          <tr><th>ID</th><th>Nome</th><th>Email</th><th>Ações</th></tr>
+        </thead>
+        <tbody id="listaPessoas"></tbody>
+      </table>
+    </div>
+  </div>
+  <script src="pessoas.js"></script>
+</body>
+</html>
