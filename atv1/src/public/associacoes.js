@@ -40,7 +40,6 @@ function renderizarLista(list) {
     const c = a && a.carro ? a.carro : {};
     return `
       <tr>
-        <td>${a.id != null ? a.id : ''}</td>
         <td>${safeStr(p.nome)}</td>
         <td>${safeStr(p.email)}</td>
         <td>${safeStr(c.modelo)}</td>
