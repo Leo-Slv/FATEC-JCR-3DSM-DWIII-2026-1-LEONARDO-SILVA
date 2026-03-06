@@ -1,8 +1,6 @@
-const { PrismaClient } = require('@prisma/client');
+const prisma = require('../lib/prisma');
 const { erro, sucesso } = require('../utils/respostas');
 const { isInteger, stringPreenchida, emailBasico } = require('../utils/validacao');
-
-const prisma = new PrismaClient();
 
 async function criar(req, res) {
   try {
