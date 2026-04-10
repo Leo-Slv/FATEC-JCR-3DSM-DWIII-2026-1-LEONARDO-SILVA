@@ -1,0 +1,46 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model ShoppingItem {
+  id       Int     @id @default(autoincrement())
+  name     String
+  quantity Int
+  isDone   Boolean @default(false)
+}
+
+model Produto {
+  id    Int     @id @default(autoincrement())
+  nome  String
+  preco Decimal
+}
+
+model Categoria {
+  id      Int      @id @default(autoincrement())
+  nome    String
+  tarefas Tarefa[]
+}
+
+model Tarefa {
+  id          Int       @id @default(autoincrement())
+  titulo      String
+  categoria   Categoria @relation(fields: [categoriaId], references: [id], onDelete: Cascade)
+  categoriaId Int
+}
+
+model Author {
+  id    Int    @id @default(autoincrement())
+  books Book[]
+}
+
+model Book {
+  id       Int    @id @default(autoincrement())
+  title    String
+  author   Author @relation(fields: [authorId], references: [id])
+  authorId Int
+}
+
