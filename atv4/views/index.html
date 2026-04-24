@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clima</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-glow" aria-hidden="true"></div>
+
+    <main class="app">
+        <article class="card">
+            <header class="card__header">
+                <p class="eyebrow">Atividade 4</p>
+                <h1>Clima ao vivo</h1>
+                <p class="lead">Busque qualquer cidade e veja temperatura, umidade e condições atuais.</p>
+            </header>
+
+            <form class="search" action="#" onsubmit="event.preventDefault(); getWeather();">
+                <label for="city" class="visually-hidden">Cidade</label>
+                <input type="text" id="city" name="city" placeholder="Ex.: São Paulo" autocomplete="address-level2" />
+                <button type="submit">Buscar</button>
+            </form>
+
+            <div id="result" class="result" role="status" aria-live="polite"></div>
+        </article>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
